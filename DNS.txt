@@ -1,0 +1,18 @@
+read -p "Please Enter The RG Name:" RGNAME
+RG=TEST-RG
+
+echo "Creating Azure Resource Group"
+az group create -l Eastus -n ${RG}
+
+echo "Creating Azure Virtual Network"
+az network vnet create -g ${RG} -n ${RG}-Vnet1 --address-prefix 10.1.0.0/16 \
+--subnet-name ${RG}-Subnet1 --subnet-prefix 10.1.1.0/24 -l Eastus
+
+echo "Creating Azure Virtual Machines"
+az vm create --resource-group ${RG} --name TestServer1 --image UbuntuLTS --vnet-name ${RG}-Vnet1 \
+--subnet ${RG}-Subnet1 --admin-username testuser --admin-password "Kh@leel4455*" --size Standard_B1s \
+--public-ip-sku Standard --nsg "" --custom-data ./clouddrive/cloud-init.txt -l Eastus
+
+az vm create --resource-group ${RG} --name TestServer2 --image UbuntuLTS --vnet-name ${RG}-Vnet1 \
+--subnet ${RG}-Subnet1 --admin-username testuser --admin-password "Kh@leel4455*" --size Standard_B1s \
+--public-ip-sku Standard --nsg "" --custom-data ./clouddrive/cloud-init.txt -l Eastus

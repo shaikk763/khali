@@ -1,0 +1,40 @@
+November Bills::
+-------------------------
+35500-loan--
+ 3600-loan
+12500-rent-done
+10000-gold-done
+ 7500-podupu-done
+ 1600-emi
+ 1000-wifi
+  500-water-done
+ 1000-electricity bill
+  500-mobile recharge-done
+-------------------------
+73700:Total
+-------------------------
+Extras:
+1000-kalyani 
+*************************************
+
+
+December Bills::
+-------------------------
+35500-loan
+ 3600-loan
+12500-rent
+10000-gold
+ 7500-podupu
+ 1600-emi
+ 1000-wifi
+  500-water
+ 1000-electricity bill
+  500-mobile recharge
+-------------------------
+73700:Total
+-------------------------
+Extras:
+ 1000-kalyani 
+10000-Credit card
+*************************************
+
